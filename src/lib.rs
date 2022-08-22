@@ -78,6 +78,7 @@ pub fn get_solution(year: u16, day: u8) {
             1 => Solution::new::<year2021::day01::SonarSweep>(content),
             2 => Solution::new::<year2021::day02::Dive>(content),
             3 => Solution::new::<year2021::day03::BinaryDiagnostic>(content),
+            4 => Solution::new::<year2021::day04::Bingo>(content),
             _ => unreachable!(),
         }
         _ => unreachable!(),
