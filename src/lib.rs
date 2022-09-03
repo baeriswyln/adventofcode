@@ -79,6 +79,10 @@ pub fn get_solution(year: u16, day: u8) {
             2 => Solution::new::<year2021::day02::Dive>(content),
             3 => Solution::new::<year2021::day03::BinaryDiagnostic>(content),
             4 => Solution::new::<year2021::day04::GiantSquid>(content),
+            5 => Solution::new::<year2021::day05::HydrothermalAdventure>(content),
+            6 => Solution::new::<year2021::day06::Lanternfish>(content),
+            7 => Solution::new::<year2021::day07::TreacheryOfWhales>(content),
+            8 => Solution::new::<year2021::day08::SevenSegment>(content),
             _ => unreachable!(),
         }
         _ => unreachable!(),
