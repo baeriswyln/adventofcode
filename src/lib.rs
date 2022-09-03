@@ -1,11 +1,12 @@
-mod year2021;
+use std::{
+    fs,
+    time::{Duration, Instant},
+};
 
 use anyhow::Context;
 use humantime::format_duration;
-use std::{
-    fs,
-    time::{Duration, Instant}
-};
+
+mod year2021;
 
 trait Advent {
     fn new(data: &str) -> Self
@@ -83,6 +84,8 @@ pub fn get_solution(year: u16, day: u8) {
             6 => Solution::new::<year2021::day06::Lanternfish>(content),
             7 => Solution::new::<year2021::day07::TreacheryOfWhales>(content),
             8 => Solution::new::<year2021::day08::SevenSegment>(content),
+            9 => Solution::new::<year2021::day09::SmokeBasin>(content),
+            10 => Solution::new::<year2021::day10::SyntaxScoring>(content),
             _ => unreachable!(),
         }
         _ => unreachable!(),
@@ -91,7 +94,7 @@ pub fn get_solution(year: u16, day: u8) {
     solution.get_result();
 }
 
-fn get_time<T>(f: impl FnOnce() -> T) -> (T, Duration){
+fn get_time<T>(f: impl FnOnce() -> T) -> (T, Duration) {
     let start = Instant::now();
     let result = f();
     let time = start.elapsed();
