@@ -86,6 +86,8 @@ pub fn get_solution(year: u16, day: u8) {
             8 => Solution::new::<year2021::day08::SevenSegment>(content),
             9 => Solution::new::<year2021::day09::SmokeBasin>(content),
             10 => Solution::new::<year2021::day10::SyntaxScoring>(content),
+            11 => Solution::new::<year2021::day11::Dumbo>(content),
+            12 => Solution::new::<year2021::day12::PassagePathing>(content),
             _ => unreachable!(),
         }
         _ => unreachable!(),
