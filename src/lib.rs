@@ -88,6 +88,10 @@ pub fn get_solution(year: u16, day: u8) {
             10 => Solution::new::<year2021::day10::SyntaxScoring>(content),
             11 => Solution::new::<year2021::day11::Dumbo>(content),
             12 => Solution::new::<year2021::day12::PassagePathing>(content),
+            13 => Solution::new::<year2021::day13::Origami>(content),
+            14 => Solution::new::<year2021::day14::Polymerization>(content),
+            15 => Solution::new::<year2021::day15::Chiton>(content),
+            16 => Solution::new::<year2021::day16::PacketDecoder>(content),
             _ => unreachable!(),
         }
         _ => unreachable!(),
