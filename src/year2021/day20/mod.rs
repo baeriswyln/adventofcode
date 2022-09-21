@@ -2,7 +2,7 @@ pub struct TrenchMap {
 }
 
 impl crate::Advent for TrenchMap {
-    fn new(data: &str) -> Self {
+    fn new(_data: &str) -> Self {
         TrenchMap {
         }
     }

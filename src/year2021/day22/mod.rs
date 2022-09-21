@@ -2,7 +2,7 @@ pub struct ReactorReboot {
 }
 
 impl crate::Advent for ReactorReboot {
-    fn new(data: &str) -> Self {
+    fn new(_data: &str) -> Self {
         ReactorReboot {
         }
     }

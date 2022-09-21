@@ -2,7 +2,7 @@ pub struct DiracDice {
 }
 
 impl crate::Advent for DiracDice {
-    fn new(data: &str) -> Self {
+    fn new(_data: &str) -> Self {
         DiracDice {
         }
     }

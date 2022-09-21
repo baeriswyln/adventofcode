@@ -2,7 +2,7 @@ pub struct Amphipod {
 }
 
 impl crate::Advent for Amphipod {
-    fn new(data: &str) -> Self {
+    fn new(_data: &str) -> Self {
         Amphipod {
         }
     }

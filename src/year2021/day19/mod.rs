@@ -2,7 +2,7 @@ pub struct BeaconScanner {
 }
 
 impl crate::Advent for BeaconScanner {
-    fn new(data: &str) -> Self {
+    fn new(_data: &str) -> Self {
         BeaconScanner {
         }
     }

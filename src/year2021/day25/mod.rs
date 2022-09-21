@@ -2,7 +2,7 @@ pub struct Cucumber {
 }
 
 impl crate::Advent for Cucumber {
-    fn new(data: &str) -> Self {
+    fn new(_data: &str) -> Self {
         Cucumber {
         }
     }

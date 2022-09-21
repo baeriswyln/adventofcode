@@ -2,7 +2,7 @@ pub struct ALU {
 }
 
 impl crate::Advent for ALU {
-    fn new(data: &str) -> Self {
+    fn new(_data: &str) -> Self {
         ALU {
         }
     }
