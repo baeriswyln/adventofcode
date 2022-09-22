@@ -14,7 +14,7 @@ struct Cli {
 }
 
 fn main() {
-    let day_count: u8 = 16;
+    let day_count: u8 = 18;
     let year_first: u16 = 2021;
     let year_count: u16 = 1;
     let args = Cli::from_args();
