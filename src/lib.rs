@@ -7,6 +7,7 @@ use anyhow::Context;
 use humantime::format_duration;
 
 mod year2021;
+mod year2022;
 
 trait Advent {
     fn new(data: &str) -> Self
@@ -102,6 +103,12 @@ pub fn get_solution(year: u16, day: u8) {
             24 => Solution::new::<year2021::day24::ALU>(content),
             25 => Solution::new::<year2021::day25::Cucumber>(content),
             _ => unreachable!(),
+        },
+        2022 => match day{
+            1 => Solution::new::<year2022::day01::Calories>(content),
+            2 => Solution::new::<year2022::day02::RockPaperScissor>(content),
+            3 => Solution::new::<year2022::day03::RucksackReorganization>(content),
+            _ => unreachable!()
         }
         _ => unreachable!(),
     };
