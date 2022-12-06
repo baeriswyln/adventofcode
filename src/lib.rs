@@ -108,6 +108,9 @@ pub fn get_solution(year: u16, day: u8) {
             1 => Solution::new::<year2022::day01::Calories>(content),
             2 => Solution::new::<year2022::day02::RockPaperScissor>(content),
             3 => Solution::new::<year2022::day03::RucksackReorganization>(content),
+            4 => Solution::new::<year2022::day04::CampCleanup>(content),
+            5 => Solution::new::<year2022::day05::SupplyStacks>(content),
+            6 => Solution::new::<year2022::day06::TuningTrouble>(content),
             _ => unreachable!()
         }
         _ => unreachable!(),
