@@ -111,6 +111,9 @@ pub fn get_solution(year: u16, day: u8) {
             4 => Solution::new::<year2022::day04::CampCleanup>(content),
             5 => Solution::new::<year2022::day05::SupplyStacks>(content),
             6 => Solution::new::<year2022::day06::TuningTrouble>(content),
+            7 => Solution::new::<year2022::day07::OutOfSpace>(content),
+            8 => Solution::new::<year2022::day08::TreeHouse>(content),
+            9 => Solution::new::<year2022::day09::RopeBridge>(content),
             _ => unreachable!()
         }
         _ => unreachable!(),
