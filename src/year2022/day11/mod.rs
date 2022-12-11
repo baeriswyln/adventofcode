@@ -92,13 +92,11 @@ impl crate::Advent for Monkey {
     fn part2(&self) -> usize {
         let rounds = 10000;
         let monkeys = do_iterations(self.data.clone(), rounds, 1);
-        println!("{:?}", monkeys[0].items);
 
         let mut values = monkeys.iter().map(|l| l.counter).collect::<Vec<usize>>();
         values.sort();
         values.reverse();
 
-        println!("{:?}", values);
         (values[0] * values[1]) as usize
     }
 }
@@ -111,18 +109,14 @@ fn do_iterations(mut monkeys: Vec<Monk>, rounds: usize, divide_factor: usize) ->
             let mut monkey = monkeys[i].clone();
             for item in monkey.items {
                 let mut val = item;
-                // println!("Inspect {}", val);
-                // println!("Inspect {}", monkey.factor);
                 match monkey.operation {
                     Operator::Plus => val += monkey.factor as u128,
                     Operator::PlusSelf => val *= 2,
                     Operator::Times => val *= monkey.factor as u128,
                     Operator::TimesSelf => val *= val,
                 }
-                // println!("Value is now {}", val);
                 val %= modulus;
                 val /= divide_factor as u128;
-                // println!("Value is now {}", val);
                 if val % monkey.modulo as u128 == 0 {
                     monkeys[monkey.if_true].items.push_back(val);
                 } else {
@@ -133,11 +127,6 @@ fn do_iterations(mut monkeys: Vec<Monk>, rounds: usize, divide_factor: usize) ->
             monkey.items = VecDeque::new();
             monkeys[i] = monkey;
         }
-
-        // for monkey in &monkeys {
-        //     println!("Monkey {}: {:?}", 0, monkeys[0].items);
-        // }
-        // println!();
     }
     monkeys
 }
