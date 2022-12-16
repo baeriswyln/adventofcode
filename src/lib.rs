@@ -117,6 +117,10 @@ pub fn get_solution(year: u16, day: u8) {
             10 => Solution::new::<year2022::day10::CathodeRayTube>(content),
             11 => Solution::new::<year2022::day11::Monkey>(content),
             12 => Solution::new::<year2022::day12::HillClimbing>(content),
+            13 => Solution::new::<year2022::day13::DistressSignal>(content),
+            14 => Solution::new::<year2022::day14::RegolithReservoir>(content),
+            15 => Solution::new::<year2022::day15::BeaconExclusionZone>(content),
+            16 => Solution::new::<year2022::day16::ProboscideaVolcanium>(content),
             _ => unreachable!()
         }
         _ => unreachable!(),
