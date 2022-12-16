@@ -116,6 +116,7 @@ pub fn get_solution(year: u16, day: u8) {
             9 => Solution::new::<year2022::day09::RopeBridge>(content),
             10 => Solution::new::<year2022::day10::CathodeRayTube>(content),
             11 => Solution::new::<year2022::day11::Monkey>(content),
+            12 => Solution::new::<year2022::day12::HillClimbing>(content),
             _ => unreachable!()
         }
         _ => unreachable!(),
