@@ -6,7 +6,7 @@ pub struct ProboscideaVolcanium {
 impl crate::Advent for ProboscideaVolcanium {
     fn new(data: &str) -> Self {
         ProboscideaVolcanium {
-            data: vec![]
+            data: vec![String::new(); data.len()]
         }
     }
 
@@ -17,7 +17,7 @@ impl crate::Advent for ProboscideaVolcanium {
     }
 
     fn part1(&self) -> usize {
-        0
+        self.data.len()
     }
 
     fn part2(&self) -> usize {

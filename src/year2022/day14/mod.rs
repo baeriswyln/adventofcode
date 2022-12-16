@@ -21,8 +21,8 @@ impl crate::Advent for RegolithReservoir {
             for i in 0..(l.len() - 1) {
                 let mut start_x = l[i].0;
                 let mut start_y = l[i].1;
-                let mut end_x = l[i + 1].0;
-                let mut end_y = l[i + 1].1;
+                let end_x = l[i + 1].0;
+                let end_y = l[i + 1].1;
 
                 if start_y > max_y { max_y = start_y }
                 if end_y > max_y { max_y = end_y }

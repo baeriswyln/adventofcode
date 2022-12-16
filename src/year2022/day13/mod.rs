@@ -1,22 +1,11 @@
-enum Value {
-    Number(usize),
-    List(Vec<Value>),
-}
-
-struct Pair {
-    left: Value,
-    right: Value,
-}
-
-
 pub struct DistressSignal {
-    data: Vec<Pair>,
+    data: Vec<String>,
 }
 
 impl crate::Advent for DistressSignal {
     fn new(data: &str) -> Self {
         DistressSignal {
-            data: vec![]
+            data: vec![String::new(); data.len()]
         }
     }
 
@@ -27,7 +16,7 @@ impl crate::Advent for DistressSignal {
     }
 
     fn part1(&self) -> usize {
-        0
+        self.data.len()
     }
 
     fn part2(&self) -> usize {
